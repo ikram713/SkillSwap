@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #0f172a 30%, #0a0f1a 100%);
+    color: white;
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.left-section {
+    flex: 1;
+    padding: 40px;
+}
+
+.right-section {
+    flex: 1;
+    background: #2cb67d;
+    color: black;
+    padding: 40px;
+    border-top-left-radius: 50px;
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+input, select {
+    width: 100%;
+    padding: 7px;
+    margin: 9px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+select {
+    background: #fff;
+    color: black;
+    cursor: pointer;
+}
+
+/* Style the dropdown options */
+select option {
+    background: white;
+    color: black;
+}
+
+/* Hover effect for select */
+select:hover {
+    background: #f0f0f0;
+}
+
+button {
+    width: 100%;
+    padding: 7px;
+    background: #2cb67d;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: black;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #239f6b;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #2cb67d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.skill-swap {
+    color: #2cb67d;
+}
