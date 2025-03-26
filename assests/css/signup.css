@@ -1,123 +1,153 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, #0f172a 30%, #0a0f1a 100%);
-    color: white;
+    height: 100vh;
+    background-color: #0d1117;
 }
 
 .container {
     display: flex;
-    width: 900px;
-    height: 500px;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
+    width: 80%;
+    max-width: 900px;
+    background: #161b22;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.left-section {
-    flex: 1;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signup-box, .info-box {
     padding: 40px;
-}
-
-.right-section {
+    color: white;
     flex: 1;
-    background: #2cb67d;
-    color: black;
-    padding: 40px;
-    border-top-left-radius: 50px;
 }
 
-h2 {
-    font-weight: 600;
-    margin-bottom: 35px;
+.signup-box {
+    background: #161b22;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight {
+    color: #239f6b;
+    font-weight: bold;
 }
 
 input, select {
     width: 100%;
-    padding: 7px;
-    margin: 9px 0;
-    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
     border: none;
+    border-radius: 5px;
     outline: none;
-}
-
-select {
-    background: #fff;
-    color: black;
-    cursor: pointer;
-}
-
-/* Style the dropdown options */
-select option {
-    background: white;
-    color: black;
-}
-
-/* Hover effect for select */
-select:hover {
-    background: #f0f0f0;
-}
-
-button {
-    width: 100%;
-    padding: 7px;
-    background: #2cb67d;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    color: black;
-    cursor: pointer;
-    margin-top: 15px;
     transition: 0.3s;
+    animation: slideIn 1s ease-in-out;
 }
 
-button:hover {
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+input:focus, select:focus {
+    box-shadow: 0 0 10px #239f6b;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
     background: #239f6b;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 18px;
-}
-
-.social-icons img {
-    width: 40px;
-    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    border-radius: 50%;
+    transition: background 0.3s, transform 0.3s;
 }
 
-.social-icons img:hover {
-    transform: scale(1.1);
+.btn:hover {
+    background: #239f6b;
+    transform: scale(1.05);
 }
 
-.login-link {
+.social-icons a img {
+    width: 40px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    animation: bounceIn 1.2s ease-in-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+.info-box {
+    background: #239f6b;
+    color: #0d1117;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    margin-top: 15px;
+    position: relative;
 }
 
-.login-link a {
-    color: #2cb67d;
+.info-box img {
+    width: 300px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.signin {
+    color: #239f6b;
     text-decoration: none;
-    font-weight: bold;
 }
 
-.login-link a:hover {
+.signin:hover {
     text-decoration: underline;
 }
 
-.skill-swap {
-    color: #2cb67d;
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 }

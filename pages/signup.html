@@ -9,40 +9,38 @@
 </head>
 <body>
     <div class="container">
-        <!-- Left Section -->
-        <div class="left-section">
-            <h2>Join <span class="skill-swap">SkillSWAP</span> Today</h2>
+        <div class="signup-box">
+            <h2>Join <span class="highlight">SkillSWAP</span> Today</h2>
             <p>Fill in your details to create an account</p>
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            
-            <!-- Skill Selection Dropdown -->
-            <select>
-                <option value="" disabled selected>Select your skill</option>
-                <option value="Web Development">Web Development</option>
-                <option value="Graphic Design">Graphic Design</option>
-                <option value="Digital Marketing">Digital Marketing</option>
-                <option value="Data Science">Data Science</option>
-                <option value="Content Writing">Content Writing</option>
-                <option value="Photography">Photography</option>
-                <option value="UI/UX Design">UI/UX Design</option>
-            </select>
-
-            <button>Sign up</button>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <select required>
+                    <option value="">Select your skill</option>
+                    <option value="web-dev">Web Development</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="ai-ml">AI & ML</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="informationtechnology">Information Technology</option>
+                    <option value="cloudcomputing">Cloud Computing</option>
+                    <option value="databasemanagement">Database Management</option>
+                    <option value="androiddevelopment">Android Development</option>
+                </select>
+                <button type="submit" class="btn">Sign up</button>
+            </form>
             <div class="social-icons">
-                <img src="../assests/images/google.webp" alt="Google">
-                <img src="../assests/images/github.webp" alt="GitHub">
-                <img src="../assests/images/facebook.webp" alt="Facebook">
+                <a href="https://accounts.google.com" target="_blank"><img src="../assests/images/google.webp" alt="Google"></a>
+                <a href="https://github.com/login" target="_blank"><img src="../assests/images/github.webp" alt="GitHub"></a>
+                <a href="https://www.facebook.com/login" target="_blank"><img src="../assests/images/facebook.webp" alt="Facebook"></a>
             </div>
-            <p class="login-link">Already have an account? <a href="login.html">Sign in</a></p>
+            <p>Already have an account? <a href="login.html" class="signin">Sign in</a></p>
         </div>
-
-        <!-- Right Section -->
-        <div class="right-section">
+        <div class="info-box">
+            <img src="logoskill.webp" alt="SkillSwap Logo">
             <h2>Why Join SkillSwap?</h2>
             <p>“Join SkillSwap to connect with professionals, exchange skills, and boost your career. Learn from experts and grow in a thriving community!”</p>
         </div>
-    </div>
+    </div> 
 </body>
 </html>
